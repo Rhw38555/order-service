@@ -99,23 +99,6 @@ class OrderService(
                 paymentMethodType,
                 order.orderDate.format(GlobalSettings.dateFormatShort)
             )
-
-            // orderItems 변환
-//            order.orderItems.forEach {
-//                tmpOrderItems.add(
-//                    OrderItemResponse(it.product.id!!, it.product.name, it.product.price.intValueExact(), it.quantity)
-//                )
-//            }
-//
-//            // 반환
-//            OrderResponse(
-//                order.id!!,
-//                order.customer.id!!,
-//                tmpOrderItems,
-//                status.status,
-//                paymentMethod!!.type,
-//                orderDate.format(GlobalSettings.dateFormatShort)
-//            )
         }
     }
 
@@ -148,26 +131,6 @@ class OrderService(
                     order.orderDate.format(GlobalSettings.dateFormatShort)
                 )
             }
-
-//            this.forEach {
-//                val tmpOrderItems = mutableListOf<OrderItemResponse>()
-//                it.orderItems.forEach {
-//                    tmpOrderItems.add(
-//                        OrderItemResponse(it.product.id!!, it.product.name, it.product.price.intValueExact(), it.quantity)
-//                    )
-//                }
-//
-//                orderListResponse.add(
-//                    OrderResponse(
-//                        it.id!!,
-//                        it.customer.id!!,
-//                        tmpOrderItems,
-//                        it.status.status,
-//                        it.paymentMethod!!.type,
-//                        it.orderDate.format(GlobalSettings.dateFormatShort)
-//                    )
-//                )
-//            }
             // 주문이 있는 경우 처리
             OrderListResponse(orderListResponse)
         }
